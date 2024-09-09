@@ -57,4 +57,28 @@ footer{
         <p>&copy; Exercício guanabara 01</p>
     </footer>
 </body>
+<script>
+    
+function carregar(){
+    var msg = window.document.getElementById('msg')
+    var img = window.document.getElementById('imagem')
+    var data = new Date()
+    var hora = data.getHours()
+   //var hora = 14
+    msg.innerHTML = `Agora são ${hora} horas.`
+    if (hora >= 0 && hora < 12) {
+        //BOM DIIIA!
+        img.src = 'manha.png'
+        document.body.style.backgroundColor = '#d8bd94'
+    } else if (hora >= 12 && hora <18) {
+        //BOA TARDEE!
+        img.src = 'tarde.png'
+        document.body.style.backgroundColor = '#f4821d'
+    } else {
+        //BOA NOIITE!
+        img.src = 'noite.png'
+        document.body.style.backgroundColor = '#032140'
+    }
+}
+</script>
 </html>
